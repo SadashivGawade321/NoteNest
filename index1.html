@@ -294,8 +294,6 @@
 <div class="view-more-container" data-aos="zoom-in">
   <a href="#" class="view-more-btn rzp-pay">View More →</a>
 </div>
-rzp_test_RnGyB6kYumUQNv
-
   </section>
 
   <!-- Razorpay Script and Handler -->
@@ -417,105 +415,156 @@ rzp_test_RnGyB6kYumUQNv
 
  <!-- Floating AI Button -->
 <!-- Floating AI Button -->
-<div id="chatbot-icon" style="position:fixed;bottom:30px;right:30px;z-index:1000;cursor:pointer;background:#3399cc;color:#fff;padding:16px 18px;border-radius:50%;font-size:2rem;box-shadow:0 2px 8px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;">
-  🤖
-</div>
-
-<div id="chatbot-container" class="hidden" style="position:fixed;bottom:100px;right:30px;width:340px;max-width:90vw;background:#fff;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.18);z-index:1001;display:flex;flex-direction:column;">
-  <div id="chatbot-header" style="background:#3399cc;color:#fff;padding:12px 16px;border-radius:12px 12px 0 0;display:flex;justify-content:space-between;align-items:center;">
-    <span>ChatBot</span>
-    <button id="close-btn" style="background:none;border:none;color:#fff;font-size:1.3rem;cursor:pointer;">&times;</button>
-  </div>
-  <div id="chatbot-body" style="padding:12px;height:220px;overflow-y:auto;">
-    <div id="chatbot-messages" style="display:flex;flex-direction:column;gap:8px;"></div>
-  </div>
-  <div id="chatbot-input-container" style="display:flex;padding:10px;border-top:1px solid #eee;">
-    <input type="text" id="chatbot-input" placeholder="Type a message" style="flex:1;padding:8px 10px;border-radius:5px;border:1px solid #ccc;outline:none;" autocomplete="off" />
-    <button id="send-btn" style="margin-left:8px;padding:8px 14px;background:#3399cc;color:#fff;border:none;border-radius:5px;cursor:pointer;">Send</button>
-  </div>
-</div>
-
-<!-- ✅ Script tag was broken, fixed here -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const chatbotContainer = document.getElementById("chatbot-container");
-  const closeBtn = document.getElementById("close-btn");
-  const sendBtn = document.getElementById("send-btn");
-  const chatBotInput = document.getElementById("chatbot-input");
-  const chatbotMessages = document.getElementById("chatbot-messages");
-  const chatbotIcon = document.getElementById("chatbot-icon");
-
-  chatbotIcon.addEventListener("click", () => {
-    chatbotContainer.classList.remove("hidden");
-    chatbotIcon.style.display = "none";
-  });
-
-  closeBtn.addEventListener("click", () => {
-    chatbotContainer.classList.add("hidden");
-    chatbotIcon.style.display = "flex";
-  });
-
-  sendBtn.addEventListener("click", sendMessage);
-
-  chatBotInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") sendMessage();
-  });
-});
-
-function sendMessage() {
-  const userInput = document.getElementById("chatbot-input");
-  const userMessage = userInput.value.trim();
-  if (userMessage) {
-    appendMessage("user", userMessage);
-    userInput.value = ""; // Clear the input after sending
-    getBotResponse(userMessage);
-  }
-}
-
-function appendMessage(sender, message) {
-  const messageContainer = document.getElementById("chatbot-messages");
-  const messageElement = document.createElement("div");
-  messageElement.classList.add("message", sender);
-  messageElement.textContent = message;
-  messageContainer.appendChild(messageElement);
-  messageContainer.scrollTop = messageContainer.scrollHeight;
-}
-
-async function getBotResponse(userMessage) {
-  const API_KEY = "AIzaSyDqMYF8x-JRIuK6XCuQBoIEWXOK3eebsU0";
- const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
-
-
-  try {
-    const response = await fetch(API_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [
-          {
-            parts: [{ text: userMessage }],
-          },
-        ],
-      }),
-    });
-
-    const data = await response.json();
-
-    if (!data.candidates || !data.candidates.length) {
-      throw new Error("No response from Gemini API");
+ <style>
+    /* Tooltip styling */
+    #chatbot-tooltip {
+      position: fixed;
+      bottom: 90px;
+      right: 90px;
+      background: #333;
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 999;
+      transition: opacity 0.3s ease;
     }
 
-    const botMessage = data.candidates[0].content.parts[0].text;
-    appendMessage("bot", botMessage);
-  } catch (error) {
-    console.error("Error:", error);
-    appendMessage(
-      "bot",
-      "Sorry, I'm having trouble responding. Please try again."
-    );
-  }
-}
-</script>
+    /* Message bubble styling */
+    .message {
+      padding: 8px 12px;
+      border-radius: 10px;
+      max-width: 80%;
+      word-wrap: break-word;
+    }
+
+    .user {
+      align-self: flex-end;
+      background-color: #d1eaff;
+    }
+
+    .bot {
+      align-self: flex-start;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tooltip on hover -->
+  <div id="chatbot-tooltip">Ask any question regarding your studies</div>
+
+  <!-- Chatbot icon -->
+  <div id="chatbot-icon" style="position:fixed;bottom:30px;right:30px;z-index:1000;cursor:pointer;background:#3399cc;color:#fff;padding:16px 18px;border-radius:50%;font-size:2rem;box-shadow:0 2px 8px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;">
+    🤖
+  </div>
+
+  <!-- Chatbot container -->
+  <div id="chatbot-container" class="hidden" style="position:fixed;bottom:100px;right:30px;width:340px;max-width:90vw;background:#fff;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.18);z-index:1001;display:flex;flex-direction:column;">
+    <div id="chatbot-header" style="background:#3399cc;color:#fff;padding:12px 16px;border-radius:12px 12px 0 0;display:flex;justify-content:space-between;align-items:center;">
+      <span>ChatBot</span>
+      <button id="close-btn" style="background:none;border:none;color:#fff;font-size:1.3rem;cursor:pointer;">&times;</button>
+    </div>
+    <div id="chatbot-body" style="padding:12px;height:220px;overflow-y:auto;">
+      <div id="chatbot-messages" style="display:flex;flex-direction:column;gap:8px;"></div>
+    </div>
+    <div id="chatbot-input-container" style="display:flex;padding:10px;border-top:1px solid #eee;">
+      <input type="text" id="chatbot-input" placeholder="Type a message" style="flex:1;padding:8px 10px;border-radius:5px;border:1px solid #ccc;outline:none;" autocomplete="off" />
+      <button id="send-btn" style="margin-left:8px;padding:8px 14px;background:#3399cc;color:#fff;border:none;border-radius:5px;cursor:pointer;">Send</button>
+    </div>
+  </div>
+
+  <!-- Chatbot functionality -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const chatbotContainer = document.getElementById("chatbot-container");
+      const closeBtn = document.getElementById("close-btn");
+      const sendBtn = document.getElementById("send-btn");
+      const chatBotInput = document.getElementById("chatbot-input");
+      const chatbotMessages = document.getElementById("chatbot-messages");
+      const chatbotIcon = document.getElementById("chatbot-icon");
+      const tooltip = document.getElementById("chatbot-tooltip");
+
+      // Show/hide chatbot
+      chatbotIcon.addEventListener("click", () => {
+        chatbotContainer.classList.remove("hidden");
+        chatbotIcon.style.display = "none";
+        tooltip.style.display = "none";
+      });
+
+      closeBtn.addEventListener("click", () => {
+        chatbotContainer.classList.add("hidden");
+        chatbotIcon.style.display = "flex";
+      });
+
+      // Tooltip on hover
+      chatbotIcon.addEventListener("mouseenter", () => {
+        tooltip.style.display = "block";
+      });
+
+      chatbotIcon.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+      });
+
+      sendBtn.addEventListener("click", sendMessage);
+
+      chatBotInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") sendMessage();
+      });
+    });
+
+    function sendMessage() {
+      const userInput = document.getElementById("chatbot-input");
+      const userMessage = userInput.value.trim();
+      if (userMessage) {
+        appendMessage("user", userMessage);
+        userInput.value = "";
+        getBotResponse(userMessage);
+      }
+    }
+
+    function appendMessage(sender, message) {
+      const messageContainer = document.getElementById("chatbot-messages");
+      const messageElement = document.createElement("div");
+      messageElement.classList.add("message", sender);
+      messageElement.textContent = message;
+      messageContainer.appendChild(messageElement);
+      messageContainer.scrollTop = messageContainer.scrollHeight;
+    }
+
+    async function getBotResponse(userMessage) {
+      const API_KEY = "AIzaSyDqMYF8x-JRIuK6XCuQBoIEWXOK3eebsU0";
+      const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            contents: [
+              {
+                parts: [{ text: userMessage }],
+              },
+            ],
+          }),
+        });
+
+        const data = await response.json();
+
+        if (!data.candidates || !data.candidates.length) {
+          throw new Error("No response from Gemini API");
+        }
+
+        const botMessage = data.candidates[0].content.parts[0].text;
+        appendMessage("bot", botMessage);
+      } catch (error) {
+        console.error("Error:", error);
+        appendMessage("bot", "Sorry, I'm having trouble responding. Please try again.");
+      }
+    }
+  </script>
 
 <footer class="footer">
   <div class="footer-container">
