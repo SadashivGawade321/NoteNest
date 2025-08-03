@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    
+<img  class ="image-gradient"src="gradient.png" alt=" gradient">
+<div class="layer-blur"></div>
+
+<div class="container">
+    <header>
+  <div class="logo">
+    <img src="company logo.jpg" alt="Shivestic Logo" />
+    <span>NOTENEST</span>
+  </div>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#notes">NOTES</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+<a href="about.html" class="btn-signing">SIGN-IN</a>
+
+
+</header>
+   
+<main>
+<div class="content">
+<div class="tag-box">
+    <div class="tag">INTRODUCING &wedbar;</div>  
+</div>
+<h1> NOTENEST FOR  <br> STUDENTS
+</h1>
+<p class="description">
+    Your Study Buddy, Always Ready.
+</p>
+<div class="buttons">
+
+    <a href="#" class = "btn-get-started">GET FREE &gt;</a>
+    <a href="" class="btn-signing-main">Getstarted &gt;</a>
+</div>
+
+
+
+
+</div>
+
+
+</main>
+
+<spline-viewer  class="robot"url="https://prod.spline.design/s2eEw7k9sJroShJ1/scene.splinecode"></spline-viewer>
+
+</div>
+
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.38/build/spline-viewer.js"></script>
+
+
+
+
+<div class="mv-container">
+  <div class="mission-box slide-in-right">
+    <h3>🎯 Our Mission</h3>
+    <p>
+      To empower students by making academic resources easily accessible, organized, and effective for all levels of learners.
+    </p>
+  </div>
+
+  <div class="vision-box slide-in-left">
+    <h3>🔭 Our Vision</h3>
+    <p>
+      To become the go-to digital study companion for every student, making quality learning universal and collaborative.
+    </p>
+  </div>
+</div>
+<script>
+  const mission = document.querySelector('.slide-in-right');
+  const vision = document.querySelector('.slide-in-left');
+
+  const observerOptions = {
+    threshold: 0.3
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active');
+      }
+    });
+  }, observerOptions);
+
+  observer.observe(mission);
+  observer.observe(vision);
+</script>
+
+
+  <!-- Values Section -->
+  <section class="values-section">
+    <h2>Our Core Values</h2>
+    <div class="values-grid">
+      <div class="value-box">
+        <h3>📚 Accessibility</h3>
+        <p>Free, easy-to-use, and open to all students.</p>
+      </div>
+      <div class="value-box">
+        <h3>🤝 Collaboration</h3>
+        <p>We welcome note contributions from learners everywhere.</p>
+      </div>
+      <div class="value-box">
+        <h3>🎯 Simplicity</h3>
+        <p>Fast downloads, clean interface, focused studying.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Our Courses Button -->
+<div style="text-align: center; margin-top: 40px;">
+  <a href="javascript:void(0);" class="our-courses-btn" onclick="showCourses()">Explore Our Courses</a>
+</div>
+
+<!-- Hidden Courses Section -->
+<section class="courses-section" id="our-courses" style="display: none; padding: 60px 20px;">
+  <h2 style="text-align:center; color:#706e6e;">Our Courses</h2>
+  <div class="course-cards">
+    <!-- HTML5 Course Card -->
+    <div class="course-card">
+      <h3>HTML5 Beginner Course</h3>
+      <p>Master the building blocks of the web. Learn HTML5 basics, structure, tags, and semantic markup.</p>
+      <a href="course.html" class="start-btn">Start Course</a>
+    </div>
+
+    <!-- More Coming Soon Card -->
+    <div class="course-card">
+      <h3>More Courses</h3>
+      <p>We’re working hard to bring more amazing content soon! Stay tuned for CSS, JavaScript, and more.</p>
+      <a href="#" class="start-btn" style="background-color: grey; cursor: not-allowed;">Coming Soon</a>
+    </div>
+  </div>
+</section>
+
+<!-- CSS for Courses -->
+<style>
+  .our-courses-btn {
+    padding: 12px 25px;
+      background: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575, #730a93);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .our-courses-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+  }
+
+  .course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .course-card {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .course-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .course-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .course-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .start-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .start-btn:hover {
+    background-color: #0056b3;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (max-width: 768px) {
+    .course-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+
+<!-- JavaScript to Show Courses -->
+<script>
+  function showCourses() {
+    document.getElementById('our-courses').style.display = 'block';
+    document.getElementById('our-courses').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+
+   <section class="notes-section">
+    <h2 class="notes-title">Browse Notes by Subject 📚</h2>
+
+    <div class="notes-grid">
+      <div class="note-card" data-aos="fade-up">
+        <h3>Operating Systems</h3>
+       
+        <a href="notes/os.pdf" download class="download-btn">
+          <i class='bx bx-download'></i> Download PDF
+        </a>
+      </div>
+
+      <div class="note-card" data-aos="fade-up" data-aos-delay="100">
+  <h3>Database Management</h3>
+ 
+  <a href="https://online.flippingbook.com/view/928616540/" target="_blank" class="download-btn">
+    <i class='bx bx-download'></i> Download PDF
+  </a>
+</div>
+
+      <div class="note-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>React</h3>
+       
+        <a href="notes/webdev.pdf" download class="download-btn">
+          <i class='bx bx-download'></i> Download PDF
+        </a>
+      </div>
+
+      <div class="note-card" data-aos="fade-up" data-aos-delay="300">
+  <h3>Data Structures</h3>
+  <a href="https://online.flippingbook.com/view/928693399/" target="_blank" rel="noopener noreferrer" class="download-btn">
+    <i class='bx bx-download'></i> View PDF
+  </a>
+</div>
+
+
+     <!-- ...existing code... -->
+      <div class="note-card" data-aos="fade-up" data-aos-delay="500">
+  <h3>Artificial Intelligence</h3>
+  <a href="#" class="download-btn rzp-pay">
+    <i class='bx bx-download'></i> Download PDF
+  </a>
+</div>
+
+<div class="note-card" data-aos="fade-up" data-aos-delay="500">
+  <h3>Python Programming</h3>
+  <a href="#" class="download-btn rzp-pay">
+    <i class='bx bx-download'></i> Download PDF
+  </a>
+</div>
+
+<div class="note-card" data-aos="fade-up" data-aos-delay="500">
+  <h3>Java Programming</h3>
+  <a href="#" class="download-btn rzp-pay">
+    <i class='bx bx-download'></i> Download PDF
+  </a>
+</div>
+
+<div class="view-more-container" data-aos="zoom-in">
+  <a href="#" class="view-more-btn rzp-pay">View More →</a>
+</div>
+rzp_test_RnGyB6kYumUQNv
+
+  </section>
+
+  <!-- Razorpay Script and Handler -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  const driveLink = "https://drive.google.com/drive/folders/1KZ7lMQ9saHUlHCR2Poj1YMKgniOPR_Be";
+
+  document.querySelectorAll('.rzp-pay').forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      var options = {
+        "key": "rzp_test_RnGyB6kYumUQNv", // Replace with your actual Razorpay Key ID
+        "amount": 29900, // ₹299 = 29900 paise
+        "currency": "INR",
+        "name": "NoteNest",
+        "description": "Premium Notes Access",
+        "image": "your-logo-url.png", // Optional logo
+        "handler": function (response) {
+          // ✅ Redirect to Google Drive after payment
+          window.location.href = driveLink;
+        },
+        "theme": {
+          "color": "#1e90ff"
+        }
+      };
+
+      var rzp1 = new Razorpay(options);
+      rzp1.open();
+    });
+  });
+</script>
+
+<!-- Razorpay Script -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<section class="udemy-section">
+  <h2 class="notes-title">Free Udemy Coupons & Courses 🎓</h2>
+  
+  <div class="udemy-grid">
+    <div class="udemy-card" data-aos="fade-up">
+      <h3>Python for Beginners</h3>
+      <p>Master Python from scratch. 20+ hours of content.</p>
+      <a href="#" class="download-btn rzp-pay" data-file="https://www.udemy.com/course/pythonforbeginners/?couponCode=FREEPY2025">
+        <i class='bx bx-gift'></i> Unlock via Razorpay
+      </a>
+    </div>
+
+    <div class="udemy-card" data-aos="fade-up" data-aos-delay="100">
+      <h3>Web Development Bootcamp</h3>
+      <p>HTML, CSS, JS, React & more. Beginner to Pro.</p>
+      <a href="#" class="download-btn rzp-pay" data-file="https://www.udemy.com/course/webdevbootcamp/?couponCode=FREEWEB2025">
+        <i class='bx bx-gift'></i> Unlock via Razorpay
+      </a>
+    </div>
+
+    <div class="udemy-card" data-aos="fade-up" data-aos-delay="200">
+      <h3>Data Science & ML</h3>
+      <p>Learn Data Science and Machine Learning with Python.</p>
+      <a href="#" class="download-btn rzp-pay" data-file="https://www.udemy.com/course/datascienceml/?couponCode=FREEDATA2025">
+        <i class='bx bx-gift'></i> Unlock via Razorpay
+      </a>
+    </div>
+
+    <div class="udemy-card" data-aos="fade-up" data-aos-delay="300">
+      <h3>Java Programming Masterclass</h3>
+      <p>Comprehensive Java course for all levels.</p>
+      <a href="#" class="download-btn rzp-pay" data-file="https://www.udemy.com/course/javamasterclass/?couponCode=FREEJAVA2025">
+        <i class='bx bx-gift'></i> Unlock via Razorpay
+      </a>
+    </div>
+  </div>
+
+ <!-- View More opens Formspree form after payment -->
+  <div class="view-more-container" data-aos="zoom-in">
+    <a href="#" class="view-more-btn rzp-pay" data-form="https://formspree.io/f/mjkoegaw">
+      More Coupons →
+    </a>
+  </div>
+  <!-- Razorpay Logic -->
+<script>
+  document.querySelectorAll('.rzp-pay').forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const isFormBtn = this.classList.contains('view-more-btn');
+      const targetUrl = isFormBtn 
+        ? this.getAttribute('data-form') 
+        : this.getAttribute('data-file');
+
+      const options = {
+        key: "rzp_test_RnGyB6kYumUQNv", // Replace with your Razorpay key
+        amount: 100 * 100, // ₹100 in paisa
+        currency: "INR",
+        name: "NoteNest",
+        description: isFormBtn ? "Access Premium Coupon Form" : "Unlock Udemy Coupon",
+        image: "https://your-logo-url.com/logo.png",
+        handler: function (response) {
+          window.open(targetUrl, '_blank'); // Open the URL after payment
+        },
+        prefill: {
+          name: "Alpha",
+          email: "alpha@example.com"
+        },
+        theme: {
+          color: "#3399cc"
+        }
+      };
+
+      const rzp = new Razorpay(options);
+      rzp.open();
+    });
+  });
+</script>
+
+<!-- ...existing code... -->
+  </section>
+
+
+ <!-- Floating AI Button -->
+<!-- Floating AI Button -->
+<div id="chatbot-icon" style="position:fixed;bottom:30px;right:30px;z-index:1000;cursor:pointer;background:#3399cc;color:#fff;padding:16px 18px;border-radius:50%;font-size:2rem;box-shadow:0 2px 8px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;">
+  🤖
+</div>
+
+<div id="chatbot-container" class="hidden" style="position:fixed;bottom:100px;right:30px;width:340px;max-width:90vw;background:#fff;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.18);z-index:1001;display:flex;flex-direction:column;">
+  <div id="chatbot-header" style="background:#3399cc;color:#fff;padding:12px 16px;border-radius:12px 12px 0 0;display:flex;justify-content:space-between;align-items:center;">
+    <span>ChatBot</span>
+    <button id="close-btn" style="background:none;border:none;color:#fff;font-size:1.3rem;cursor:pointer;">&times;</button>
+  </div>
+  <div id="chatbot-body" style="padding:12px;height:220px;overflow-y:auto;">
+    <div id="chatbot-messages" style="display:flex;flex-direction:column;gap:8px;"></div>
+  </div>
+  <div id="chatbot-input-container" style="display:flex;padding:10px;border-top:1px solid #eee;">
+    <input type="text" id="chatbot-input" placeholder="Type a message" style="flex:1;padding:8px 10px;border-radius:5px;border:1px solid #ccc;outline:none;" autocomplete="off" />
+    <button id="send-btn" style="margin-left:8px;padding:8px 14px;background:#3399cc;color:#fff;border:none;border-radius:5px;cursor:pointer;">Send</button>
+  </div>
+</div>
+
+<!-- ✅ Script tag was broken, fixed here -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const chatbotContainer = document.getElementById("chatbot-container");
+  const closeBtn = document.getElementById("close-btn");
+  const sendBtn = document.getElementById("send-btn");
+  const chatBotInput = document.getElementById("chatbot-input");
+  const chatbotMessages = document.getElementById("chatbot-messages");
+  const chatbotIcon = document.getElementById("chatbot-icon");
+
+  chatbotIcon.addEventListener("click", () => {
+    chatbotContainer.classList.remove("hidden");
+    chatbotIcon.style.display = "none";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    chatbotContainer.classList.add("hidden");
+    chatbotIcon.style.display = "flex";
+  });
+
+  sendBtn.addEventListener("click", sendMessage);
+
+  chatBotInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") sendMessage();
+  });
+});
+
+function sendMessage() {
+  const userInput = document.getElementById("chatbot-input");
+  const userMessage = userInput.value.trim();
+  if (userMessage) {
+    appendMessage("user", userMessage);
+    userInput.value = ""; // Clear the input after sending
+    getBotResponse(userMessage);
+  }
+}
+
+function appendMessage(sender, message) {
+  const messageContainer = document.getElementById("chatbot-messages");
+  const messageElement = document.createElement("div");
+  messageElement.classList.add("message", sender);
+  messageElement.textContent = message;
+  messageContainer.appendChild(messageElement);
+  messageContainer.scrollTop = messageContainer.scrollHeight;
+}
+
+async function getBotResponse(userMessage) {
+  const API_KEY = "AIzaSyDqMYF8x-JRIuK6XCuQBoIEWXOK3eebsU0";
+ const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+
+
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: [
+          {
+            parts: [{ text: userMessage }],
+          },
+        ],
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!data.candidates || !data.candidates.length) {
+      throw new Error("No response from Gemini API");
+    }
+
+    const botMessage = data.candidates[0].content.parts[0].text;
+    appendMessage("bot", botMessage);
+  } catch (error) {
+    console.error("Error:", error);
+    appendMessage(
+      "bot",
+      "Sorry, I'm having trouble responding. Please try again."
+    );
+  }
+}
+</script>
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-section about animate">
+      <h2>🎯 Our Motive</h2>
+      <p>NoteNest aims to empower students with easy access to organized notes, AI tools, and learning resources. Study smart, not hard.</p>
+    </div>
+
+    <!-- Contact Form (Formspree) -->
+    <!-- Contact Form (Formspree with Name, Email, Message) -->
+<div class="footer-section contact-form animate">
+  <h2>📬 Contact Us</h2>
+  <form action="https://formspree.io/f/mldlwjdb" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+    <!-- Social Media and Contact Info -->
+    <div class="footer-section social-contact animate">
+      <h2>📱 Connect</h2>
+      <p><i class="bx bx-phone"></i> +91 98765 43210</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="bx bxl-facebook-circle"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="bx bxl-instagram"></i></a>
+        <a href="https://github.com" target="_blank"><i class="bx bxl-github"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NoteNest. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Footer Animation Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const animatedSections = document.querySelectorAll('.animate');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animatedSections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

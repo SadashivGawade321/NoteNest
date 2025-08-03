@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML5 Elements Course | NoteNest</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="course.css">
+      <script src="course.js"></script>
+</head>
+<body>
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="main-title">HTML5 Elements Course</h1>
+      <p class="subtitle">Learn every essential HTML5 tag, grouped by topic. Unlock your certificate by completing all modules!</p>
+    </div>
+  </section>
+  <main class="course-main container">
+    <!-- Module 1 -->
+    <section class="course-module card" id="module1">
+      <h2 class="module-title">Module 1: Document Structure</h2>
+     <ul class="module-list">
+  <li class="accordion-item">
+
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;!DOCTYPE&gt;</code> &rarr; Declares the document type</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;!DOCTYPE&gt;</code> declaration defines the document as HTML5.</li>
+      <li>&#8595; It must be the very first thing in your HTML document, before the <code>&lt;html&gt;</code> tag.</li>
+      <li>&#8595; It is not an HTML tag, but an instruction to the browser about what version of HTML the page is written in.</li>
+      <li>&#8595; The correct declaration for HTML5 is <code>&lt;!DOCTYPE html&gt;</code> (not case-sensitive).</li>
+      <li>&#8595; Browsers use this to ensure your page is rendered in standards mode, not quirks mode.</li>
+      <li>&#8595; Omitting or misspelling <code>&lt;!DOCTYPE&gt;</code> can cause inconsistent display across browsers.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;html&gt;</code> &rarr; Root element</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;html&gt;</code> tag wraps all the content on the entire page.</li>
+      <li>&#8595; It is the root of the HTML document tree.</li>
+      <li>&#8595; The <code>lang</code> attribute specifies the language of the document (e.g., <code>&lt;html lang="en"&gt;</code>).</li>
+      <li>&#8595; All other HTML elements are descendants of <code>&lt;html&gt;</code>.</li>
+      <li>&#8595; The <code>&lt;html&gt;</code> tag is required in every HTML document.</li>
+      <li>&#8595; It usually contains two main sections: <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;head&gt;</code> &rarr; Metadata container</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;head&gt;</code> tag contains meta-information about the document.</li>
+      <li>&#8595; It is placed between the <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> tags.</li>
+      <li>&#8595; Common elements inside <code>&lt;head&gt;</code> include <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>, and <code>&lt;style&gt;</code>.</li>
+      <li>&#8595; Content in <code>&lt;head&gt;</code> is not displayed on the page itself.</li>
+      <li>&#8595; It helps browsers and search engines understand your page.</li>
+      <li>&#8595; Only one <code>&lt;head&gt;</code> element is allowed per document.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;title&gt;</code> &rarr; Document title</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;title&gt;</code> tag sets the title of the web page (shown in the browser tab).</li>
+      <li>&#8595; It must be placed inside the <code>&lt;head&gt;</code> section.</li>
+      <li>&#8595; Only text (no HTML) is allowed inside <code>&lt;title&gt;</code>.</li>
+      <li>&#8595; Every HTML document should have a <code>&lt;title&gt;</code> for accessibility and SEO.</li>
+      <li>&#8595; The title is used as the default name when bookmarking the page.</li>
+      <li>&#8595; There should be only one <code>&lt;title&gt;</code> per document.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;meta&gt;</code> &rarr; Metadata</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;meta&gt;</code> tag provides metadata about the HTML document.</li>
+      <li>&#8595; It is always placed inside the <code>&lt;head&gt;</code> section.</li>
+      <li>&#8595; Common uses: character set, page description, keywords, author, viewport settings.</li>
+      <li>&#8595; Example: <code>&lt;meta charset="UTF-8"&gt;</code> sets the character encoding.</li>
+      <li>&#8595; <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> helps with responsive design.</li>
+      <li>&#8595; <code>&lt;meta&gt;</code> tags are self-closing and do not have a closing tag.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;link&gt;</code> &rarr; External resources</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;link&gt;</code> tag defines a relationship between the current document and an external resource.</li>
+      <li>&#8595; Most commonly used to link CSS files: <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</li>
+      <li>&#8595; Placed inside the <code>&lt;head&gt;</code> section.</li>
+      <li>&#8595; Can also be used for icons, prefetching, and alternate languages.</li>
+      <li>&#8595; <code>&lt;link&gt;</code> is a self-closing tag and does not have a closing tag.</li>
+      <li>&#8595; Multiple <code>&lt;link&gt;</code> tags can be used in one document.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;style&gt;</code> &rarr; Internal CSS</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;style&gt;</code> tag is used to define internal CSS styles for the document.</li>
+      <li>&#8595; Placed inside the <code>&lt;head&gt;</code> section.</li>
+      <li>&#8595; CSS rules are written between the opening and closing <code>&lt;style&gt;</code> tags.</li>
+      <li>&#8595; Internal styles override external styles if they appear later in the cascade.</li>
+      <li>&#8595; Use for small or page-specific styles; for larger projects, use external CSS files.</li>
+      <li>&#8595; Only one <code>&lt;style&gt;</code> tag is needed per document, but multiple are allowed.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;body&gt;</code> &rarr; Page content</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;body&gt;</code> tag contains all the content of an HTML document (text, images, links, etc.).</li>
+      <li>&#8595; Placed after the <code>&lt;head&gt;</code> section.</li>
+      <li>&#8595; Only one <code>&lt;body&gt;</code> tag is allowed per document.</li>
+      <li>&#8595; Content inside <code>&lt;body&gt;</code> is visible to users in the browser window.</li>
+      <li>&#8595; Scripts and inline styles can also be placed inside <code>&lt;body&gt;</code>.</li>
+      <li>&#8595; The <code>&lt;body&gt;</code> tag is required in every HTML document.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;script&gt;</code> &rarr; JavaScript</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;script&gt;</code> tag is used to embed or reference JavaScript code.</li>
+      <li>&#8595; Can be placed in the <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> section.</li>
+      <li>&#8595; Use the <code>src</code> attribute to link to an external JS file.</li>
+      <li>&#8595; Inline scripts are written between the opening and closing <code>&lt;script&gt;</code> tags.</li>
+      <li>&#8595; Scripts can manipulate the DOM, handle events, and add interactivity.</li>
+      <li>&#8595; For best performance, place scripts just before the closing <code>&lt;/body&gt;</code> tag.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;base&gt;</code> &rarr; Base URL</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;base&gt;</code> tag specifies the base URL for all relative URLs in the document.</li>
+      <li>&#8595; Placed inside the <code>&lt;head&gt;</code> section, before any other elements that use URLs.</li>
+      <li>&#8595; Only one <code>&lt;base&gt;</code> tag is allowed per document.</li>
+      <li>&#8595; Example: <code>&lt;base href="https://www.example.com/"&gt;</code>.</li>
+      <li>&#8595; Useful for setting a consistent root for links and resources.</li>
+      <li>&#8595; If not set, relative URLs are resolved relative to the document's location.</li>
+    </ul>
+  </li>
+</ul>
+      <label class="module-checkbox">
+        <input type="checkbox" id="complete1" class="complete-checkbox">
+        Mark Module 1 as Complete
+      </label>
+      <button class="btn primary-btn next-btn" id="tomodule2" disabled>Next: Module 2</button>
+    </section>
+
+
+    <!-- Module 2 -->
+     <section class="course-module card" id="module2" style="display:none;">
+  <h2 class="module-title">Module 2: Text & Headings</h2>
+  <ul class="module-list">
+    
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> &rarr; Headings</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+    
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> define headings, from most important (<code>&lt;h1&gt;</code>) to least (<code>&lt;h6&gt;</code>).</li>
+      <li>&#8595; Headings help structure your content and improve accessibility and SEO.</li>
+      <li>&#8595; Only one <code>&lt;h1&gt;</code> should be used per page for the main title.</li>
+      <li>&#8595; Headings are block-level elements and appear on their own line.</li>
+      <li>&#8595; Browsers display headings in larger, bold text by default.</li>
+      <li>&#8595; Use headings to create a logical outline of your content.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;p&gt;</code> &rarr; Paragraph</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;p&gt;</code> tag defines a paragraph of text.</li>
+      <li>&#8595; Browsers automatically add space before and after each paragraph.</li>
+      <li>&#8595; Paragraphs are block-level elements.</li>
+      <li>&#8595; Use <code>&lt;br&gt;</code> for line breaks within a paragraph, not for separating paragraphs.</li>
+      <li>&#8595; Paragraphs improve readability by breaking text into manageable chunks.</li>
+      <li>&#8595; Always close paragraphs with <code>&lt;/p&gt;</code>.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;br&gt;</code> &rarr; Line break</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;br&gt;</code> tag inserts a single line break.</li>
+      <li>&#8595; It is an empty tag and does not require a closing tag.</li>
+      <li>&#8595; Use <code>&lt;br&gt;</code> to break lines of text, such as in addresses or poems.</li>
+      <li>&#8595; Avoid using <code>&lt;br&gt;</code> for layout or spacing; use CSS instead.</li>
+      <li>&#8595; Too many <code>&lt;br&gt;</code> tags can make your code hard to maintain.</li>
+      <li>&#8595; Example: <code>Line 1&lt;br&gt;Line 2</code> displays on two lines.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;hr&gt;</code> &rarr; Horizontal rule</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;hr&gt;</code> tag creates a thematic break or horizontal line.</li>
+      <li>&#8595; It is a self-closing tag and does not require a closing tag.</li>
+      <li>&#8595; Use <code>&lt;hr&gt;</code> to separate content or sections visually.</li>
+      <li>&#8595; Browsers render <code>&lt;hr&gt;</code> as a horizontal line across the page.</li>
+      <li>&#8595; You can style <code>&lt;hr&gt;</code> with CSS for thickness, color, and width.</li>
+      <li>&#8595; Avoid overusing <code>&lt;hr&gt;</code> for design; use it for logical breaks.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;strong&gt;</code> &rarr; Important text</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;strong&gt;</code> tag indicates that its contents are of strong importance.</li>
+      <li>&#8595; Browsers typically render <code>&lt;strong&gt;</code> text as bold.</li>
+      <li>&#8595; Use <code>&lt;strong&gt;</code> for text that needs emphasis for accessibility.</li>
+      <li>&#8595; Screen readers announce <code>&lt;strong&gt;</code> text with emphasis.</li>
+      <li>&#8595; Do not use <code>&lt;strong&gt;</code> for styling only; use CSS for visual bolding.</li>
+      <li>&#8595; <code>&lt;strong&gt;</code> is a semantic tag, conveying meaning to browsers and assistive tech.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;em&gt;</code> &rarr; Emphasized text</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;em&gt;</code> tag marks text that should be emphasized.</li>
+      <li>&#8595; Browsers typically render <code>&lt;em&gt;</code> text as italic.</li>
+      <li>&#8595; Use <code>&lt;em&gt;</code> for words or phrases that need stress or emphasis.</li>
+      <li>&#8595; Screen readers pronounce <code>&lt;em&gt;</code> text with emphasis.</li>
+      <li>&#8595; Do not use <code>&lt;em&gt;</code> for styling only; use CSS for visual italics.</li>
+      <li>&#8595; <code>&lt;em&gt;</code> is a semantic tag, conveying meaning to browsers and assistive tech.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;mark&gt;</code> &rarr; Highlighted text</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;mark&gt;</code> tag highlights text for reference or emphasis.</li>
+      <li>&#8595; Browsers render <code>&lt;mark&gt;</code> text with a yellow background by default.</li>
+      <li>&#8595; Use <code>&lt;mark&gt;</code> to draw attention to key words or search results.</li>
+      <li>&#8595; <code>&lt;mark&gt;</code> is inline and can be used inside paragraphs or headings.</li>
+      <li>&#8595; You can style <code>&lt;mark&gt;</code> with CSS for different highlight colors.</li>
+      <li>&#8595; <code>&lt;mark&gt;</code> improves accessibility by indicating highlighted content.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;small&gt;</code> &rarr; Smaller text</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;small&gt;</code> tag renders text in a smaller font size.</li>
+      <li>&#8595; Often used for disclaimers, copyright, or side comments.</li>
+      <li>&#8595; <code>&lt;small&gt;</code> is inline and can be used inside paragraphs or headings.</li>
+      <li>&#8595; Browsers display <code>&lt;small&gt;</code> text at about 80% of the parent size.</li>
+      <li>&#8595; Use <code>&lt;small&gt;</code> for less important or fine print text.</li>
+      <li>&#8595; You can style <code>&lt;small&gt;</code> with CSS for custom sizing.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;del&gt;</code> &rarr; Deleted text</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;del&gt;</code> tag shows text that has been deleted from a document.</li>
+      <li>&#8595; Browsers render <code>&lt;del&gt;</code> text with a strikethrough line.</li>
+      <li>&#8595; Useful for showing edits or changes in content.</li>
+      <li>&#8595; <code>&lt;del&gt;</code> is inline and can be used inside paragraphs or lists.</li>
+      <li>&#8595; You can pair <code>&lt;del&gt;</code> with <code>&lt;ins&gt;</code> for before/after edits.</li>
+      <li>&#8595; <code>&lt;del&gt;</code> can have a <code>datetime</code> attribute for when the change occurred.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;ins&gt;</code> &rarr; Inserted text</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;ins&gt;</code> tag shows text that has been inserted into a document.</li>
+      <li>&#8595; Browsers render <code>&lt;ins&gt;</code> text with an underline.</li>
+      <li>&#8595; Useful for showing edits or additions in content.</li>
+      <li>&#8595; <code>&lt;ins&gt;</code> is inline and can be used inside paragraphs or lists.</li>
+      <li>&#8595; You can pair <code>&lt;ins&gt;</code> with <code>&lt;del&gt;</code> for before/after edits.</li>
+      <li>&#8595; <code>&lt;ins&gt;</code> can have a <code>datetime</code> attribute for when the change occurred.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;sub&gt;</code> &rarr; Subscript</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;sub&gt;</code> tag displays text as subscript (below the baseline).</li>
+      <li>&#8595; Commonly used for chemical formulas (e.g., H<sub>2</sub>O).</li>
+      <li>&#8595; <code>&lt;sub&gt;</code> is inline and can be used inside paragraphs or headings.</li>
+      <li>&#8595; Browsers render <code>&lt;sub&gt;</code> text smaller and lower than surrounding text.</li>
+      <li>&#8595; Use for mathematical or scientific notation.</li>
+      <li>&#8595; Always close with <code>&lt;/sub&gt;</code>.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;sup&gt;</code> &rarr; Superscript</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;sup&gt;</code> tag displays text as superscript (above the baseline).</li>
+      <li>&#8595; Commonly used for exponents (e.g., x<sup>2</sup>).</li>
+      <li>&#8595; <code>&lt;sup&gt;</code> is inline and can be used inside paragraphs or headings.</li>
+      <li>&#8595; Browsers render <code>&lt;sup&gt;</code> text smaller and higher than surrounding text.</li>
+      <li>&#8595; Use for mathematical or scientific notation.</li>
+      <li>&#8595; Always close with <code>&lt;/sup&gt;</code>.</li>
+    </ul>
+  </li>
+</ul>
+  <!-- At the end of Module 2, before </section>: -->
+ <label class="module-checkbox">
+    <input type="checkbox" id="complete2" class="complete-checkbox">
+    Mark Module 2 as Complete
+  </label>
+
+  <!-- Navigation Buttons -->
+  <button class="btn primary-btn prev-btn" id="toModule1Prev">Previous: Module 1</button>
+  <button class="btn primary-btn next-btn" id="toModule3" disabled>Next: Module 3</button>
+</section>
+    <!-- Module 3 -->
+    <section class="course-module card" id="module3" style="display:none;">
+  <h2 class="module-title">Module 3: Links, Images & Media</h2>
+  <ul class="module-list">
+
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;a&gt;</code> &rarr; Hyperlink</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display:none;">
+        <li>&#8595; The <code>&lt;a&gt;</code> tag defines a hyperlink, used to link from one page to another.</li>
+        <li>&#8595; The <code>href</code> attribute specifies the URL of the page the link goes to.</li>
+        <li>&#8595; Links can open in the same or a new tab using the <code>target</code> attribute.</li>
+        <li>&#8595; You can link to external sites, internal pages, or specific sections using anchors.</li>
+        <li>&#8595; Links are inline elements and can contain text, images, or other HTML.</li>
+        <li>&#8595; Use descriptive link text for accessibility and SEO.</li>
+      </ul>
+    </li>
+
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;img&gt;</code> &rarr; Image</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;img&gt;</code> tag embeds an image in the page.</li>
+      <li>&#8595; The <code>src</code> attribute specifies the image file path or URL.</li>
+      <li>&#8595; The <code>alt</code> attribute provides alternative text for accessibility.</li>
+      <li>&#8595; Images are inline elements and do not require a closing tag.</li>
+      <li>&#8595; You can set width and height using attributes or CSS.</li>
+      <li>&#8595; Always use <code>alt</code> text for better SEO and accessibility.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;figure&gt;</code> &rarr; Figure with caption</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;figure&gt;</code> tag groups media content with a caption.</li>
+      <li>&#8595; Commonly used with images, diagrams, or code snippets.</li>
+      <li>&#8595; Use <code>&lt;figcaption&gt;</code> inside <code>&lt;figure&gt;</code> for the caption.</li>
+      <li>&#8595; Helps associate captions with their related content semantically.</li>
+      <li>&#8595; Improves accessibility and document structure.</li>
+      <li>&#8595; <code>&lt;figure&gt;</code> is a block-level element.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;figcaption&gt;</code> &rarr; Figure caption</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;figcaption&gt;</code> tag provides a caption for a <code>&lt;figure&gt;</code> element.</li>
+      <li>&#8595; Place <code>&lt;figcaption&gt;</code> as the first or last child of <code>&lt;figure&gt;</code>.</li>
+      <li>&#8595; Used to describe or explain the content of the figure.</li>
+      <li>&#8595; Improves accessibility and understanding for users and search engines.</li>
+      <li>&#8595; Only one <code>&lt;figcaption&gt;</code> is allowed per <code>&lt;figure&gt;</code>.</li>
+      <li>&#8595; <code>&lt;figcaption&gt;</code> is a block-level element.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;audio&gt;</code> &rarr; Audio content</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;audio&gt;</code> tag embeds sound content in documents.</li>
+      <li>&#8595; Use the <code>src</code> attribute or <code>&lt;source&gt;</code> tags for audio files.</li>
+      <li>&#8595; The <code>controls</code> attribute adds play, pause, and volume controls.</li>
+      <li>&#8595; Supports formats like MP3, WAV, and OGG.</li>
+      <li>&#8595; You can provide fallback text for unsupported browsers.</li>
+      <li>&#8595; <code>&lt;audio&gt;</code> is a block-level element by default.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;video&gt;</code> &rarr; Video content</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;video&gt;</code> tag embeds video content in documents.</li>
+      <li>&#8595; Use the <code>src</code> attribute or <code>&lt;source&gt;</code> tags for video files.</li>
+      <li>&#8595; The <code>controls</code> attribute adds play, pause, and volume controls.</li>
+      <li>&#8595; Supports formats like MP4, WebM, and OGG.</li>
+      <li>&#8595; You can set width and height attributes or use CSS.</li>
+      <li>&#8595; Provide fallback text for unsupported browsers.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;source&gt;</code> &rarr; Media source</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;source&gt;</code> tag specifies multiple media resources for <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>.</li>
+      <li>&#8595; Browsers use the first recognized format.</li>
+      <li>&#8595; Place <code>&lt;source&gt;</code> tags inside <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>.</li>
+      <li>&#8595; Use the <code>type</code> attribute to specify the media type.</li>
+      <li>&#8595; <code>&lt;source&gt;</code> is a self-closing tag.</li>
+      <li>&#8595; Improves compatibility across different browsers.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;track&gt;</code> &rarr; Text tracks for media</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;track&gt;</code> tag adds subtitles, captions, or other text tracks to media.</li>
+      <li>&#8595; Used inside <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code> elements.</li>
+      <li>&#8595; The <code>kind</code> attribute specifies the type (subtitles, captions, etc.).</li>
+      <li>&#8595; <code>&lt;track&gt;</code> is a self-closing tag.</li>
+      <li>&#8595; Improves accessibility for users with hearing impairments.</li>
+      <li>&#8595; Multiple <code>&lt;track&gt;</code> tags can be used for different languages or types.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;map&gt;</code> &rarr; Image map</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;map&gt;</code> tag defines an image map (clickable areas on an image).</li>
+      <li>&#8595; Use the <code>name</code> attribute to reference the map from an <code>&lt;img&gt;</code> tag.</li>
+      <li>&#8595; Contains one or more <code>&lt;area&gt;</code> tags that define clickable regions.</li>
+      <li>&#8595; Useful for interactive diagrams or navigation images.</li>
+      <li>&#8595; <code>&lt;map&gt;</code> is not visible on the page.</li>
+      <li>&#8595; Each <code>&lt;area&gt;</code> defines a shape and coordinates.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;area&gt;</code> &rarr; Area in image map</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;area&gt;</code> tag defines a clickable area inside an image map.</li>
+      <li>&#8595; Use the <code>shape</code> and <code>coords</code> attributes to define the region.</li>
+      <li>&#8595; The <code>href</code> attribute specifies the link for the area.</li>
+      <li>&#8595; <code>&lt;area&gt;</code> is a self-closing tag.</li>
+      <li>&#8595; Multiple <code>&lt;area&gt;</code> tags can be used in one map.</li>
+      <li>&#8595; Improves interactivity for images and diagrams.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;embed&gt;</code> &rarr; Embedded content</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;embed&gt;</code> tag embeds external content, such as PDFs or Flash, into a page.</li>
+      <li>&#8595; Use the <code>src</code> attribute to specify the file to embed.</li>
+      <li>&#8595; The <code>type</code> attribute specifies the media type.</li>
+      <li>&#8595; <code>&lt;embed&gt;</code> is a self-closing tag.</li>
+      <li>&#8595; You can set width and height attributes or use CSS.</li>
+      <li>&#8595; Use sparingly, as not all browsers support all embedded content types.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;object&gt;</code> &rarr; External resource</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;object&gt;</code> tag embeds external resources, such as images, PDFs, or multimedia.</li>
+      <li>&#8595; Use the <code>data</code> attribute to specify the file to embed.</li>
+      <li>&#8595; The <code>type</code> attribute specifies the media type.</li>
+      <li>&#8595; <code>&lt;object&gt;</code> can contain fallback content for unsupported browsers.</li>
+      <li>&#8595; You can set width and height attributes or use CSS.</li>
+      <li>&#8595; Useful for embedding interactive or multimedia content.</li>
+    </ul>
+  </li>
+  <li class="accordion-item">
+    <div class="accordion-header">
+      <span><code>&lt;iframe&gt;</code> &rarr; Inline frame</span>
+      <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+    </div>
+    <ul class="info-list" style="display:none;">
+      <li>&#8595; The <code>&lt;iframe&gt;</code> tag embeds another HTML page within the current page.</li>
+      <li>&#8595; Use the <code>src</code> attribute to specify the URL of the page to embed.</li>
+      <li>&#8595; You can set width and height attributes or use CSS.</li>
+      <li>&#8595; <code>&lt;iframe&gt;</code> is a block-level element.</li>
+      <li>&#8595; Useful for embedding videos, maps, or external content.</li>
+      <li>&#8595; Use the <code>title</code> attribute for accessibility.</li>
+    </ul>
+  </li>
+</ul>
+ <label class="module-checkbox">
+    <input type="checkbox" id="complete3" class="complete-checkbox">
+    Mark Module 3 as Complete
+  </label>
+
+  <!-- Navigation Buttons -->
+  <button class="btn primary-btn prev-btn" id="toModule2Prev">Previous: Module 2</button>
+  <button class="btn primary-btn next-btn" id="toModule4" disabled>Next: Module 4</button>
+</section>
+    <!-- Module 4 -->
+ <section class="course-module card" id="module4" style="display: none;">
+  <h2 class="module-title">Module 4: Lists & Tables</h2>
+  <ul class="module-list">
+
+    <!-- ul -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;ul&gt;</code> → Unordered list</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>The <code>&lt;ul&gt;</code> tag creates an unordered (bulleted) list.</li>
+        <li>Contains <code>&lt;li&gt;</code> elements for list items.</li>
+        <li>Displays bullet points by default.</li>
+        <li>Used where order doesn’t matter.</li>
+        <li>Can style bullets using CSS.</li>
+        <li>Block-level element.</li>
+      </ul>
+    </li>
+
+    <!-- ol -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;ol&gt;</code> → Ordered list</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Creates an ordered (numbered) list.</li>
+        <li>Contains <code>&lt;li&gt;</code> items.</li>
+        <li>Displays numbers/letters by default.</li>
+        <li>Use when order matters.</li>
+        <li>Custom styles with CSS or <code>type</code>.</li>
+        <li>Block-level element.</li>
+      </ul>
+    </li>
+
+    <!-- li -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;li&gt;</code> → List item</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Defines an item in <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, or <code>&lt;menu&gt;</code>.</li>
+        <li>Can contain any HTML elements.</li>
+        <li>Can nest lists.</li>
+        <li>Block-level element.</li>
+      </ul>
+    </li>
+
+    <!-- dl -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;dl&gt;</code> → Description list</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Defines a description list.</li>
+        <li>Uses <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code>.</li>
+        <li>Useful for terms and descriptions.</li>
+      </ul>
+    </li>
+
+    <!-- dt -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;dt&gt;</code> → Term</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Defines a term in a description list.</li>
+        <li>Must be inside <code>&lt;dl&gt;</code>.</li>
+      </ul>
+    </li>
+
+    <!-- dd -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;dd&gt;</code> → Description</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Defines a description in <code>&lt;dl&gt;</code>.</li>
+        <li>Follows <code>&lt;dt&gt;</code>.</li>
+      </ul>
+    </li>
+
+    <!-- table -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;table&gt;</code> → Table</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Defines a table element.</li>
+        <li>Contains rows, headers, and cells.</li>
+        <li>Use only for tabular data.</li>
+      </ul>
+    </li>
+
+    <!-- tr -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;tr&gt;</code> → Table row</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Defines a row inside a table.</li>
+        <li>Contains <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code>.</li>
+      </ul>
+    </li>
+
+    <!-- td -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;td&gt;</code> → Table data cell</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Defines a cell for data.</li>
+        <li>Inside <code>&lt;tr&gt;</code>.</li>
+      </ul>
+    </li>
+
+    <!-- th -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;th&gt;</code> → Table header cell</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Defines a header cell.</li>
+        <li>Bold and centered by default.</li>
+      </ul>
+    </li>
+
+    <!-- thead -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;thead&gt;</code> → Table head</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Groups header content.</li>
+        <li>Goes before <code>&lt;tbody&gt;</code>.</li>
+      </ul>
+    </li>
+
+    <!-- tbody -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;tbody&gt;</code> → Table body</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Groups main rows of the table.</li>
+      </ul>
+    </li>
+
+    <!-- tfoot -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;tfoot&gt;</code> → Table footer</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Groups footer rows of the table.</li>
+      </ul>
+    </li>
+
+    <!-- caption -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;caption&gt;</code> → Table caption</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Adds a title to the table.</li>
+        <li>Displayed above the table.</li>
+      </ul>
+    </li>
+
+    <!-- colgroup -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;colgroup&gt;</code> → Column group</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Groups columns for styling.</li>
+        <li>Goes before <code>&lt;thead&gt;</code>.</li>
+      </ul>
+    </li>
+
+    <!-- col -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;col&gt;</code> → Column</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Defines a column in a <code>&lt;colgroup&gt;</code>.</li>
+        <li>Self-closing tag.</li>
+      </ul>
+    </li>
+
+  </ul>
+
+  <!-- Completion Checkbox and Navigation -->
+  <label class="module-checkbox">
+    <input type="checkbox" id="complete4" class="complete-checkbox">
+    Mark Module 4 as Complete
+  </label>
+  <button class="btn primary-btn" id="toModule3Prev">Previous: Module 3</button>
+  <button class="btn primary-btn next-btn" id="toModule5" disabled>Next: Module 5</button>
+</section>
+<<section class="course-module card" id="module6" style="display:none;">
+  <h2 class="module-title">Module 6: Practice & Projects</h2>
+
+  <div class="project-layout">
+    
+    <!-- LEFT: JOOSLE COMPILER -->
+    <div class="compiler-box">
+      <h3>🧪 Try HTML Live</h3>
+      <p>Type HTML below and see the result:</p>
+      <textarea id="live-editor" placeholder="&lt;h1&gt;Hello HTML!&lt;/h1&gt;" style="width:100%; height:150px; font-family:monospace; padding:8px;"></textarea>
+      <iframe id="live-preview" style="width:100%; height:200px; margin-top:10px; border:1px solid #ccc;"></iframe>
+    </div>
+
+    <!-- RIGHT: PROJECT ACCORDIONS -->
+    <div class="projects-box">
+      <ul class="module-list">
+
+        <!-- Project 1 -->
+        <li class="accordion-item">
+          <div class="accordion-header">
+            <span>👤 Project 1: Personal Portfolio</span>
+            <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+          </div>
+          <ul class="info-list" style="display:none;">
+            <li>Includes your name, profile photo, bio, and links.</li>
+            <li>Use <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>.</li>
+            <li>Great for showcasing your skills!</li>
+          </ul>
+        </li>
+
+        <!-- Project 2 -->
+        <li class="accordion-item">
+          <div class="accordion-header">
+            <span>🍽️ Project 2: Restaurant Menu</span>
+            <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+          </div>
+          <ul class="info-list" style="display:none;">
+            <li>Design a menu with categories: Starters, Main Course, Desserts.</li>
+            <li>Use <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;h2&gt;</code>, and <code>&lt;span&gt;</code>.</li>
+            <li>Add prices, descriptions, and optional images.</li>
+          </ul>
+        </li>
+
+        <!-- Project 3 -->
+        <li class="accordion-item">
+          <div class="accordion-header">
+            <span>📋 Project 3: Feedback Form</span>
+            <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+          </div>
+          <ul class="info-list" style="display:none;">
+            <li>Collect name, email, feedback, and rating using a form.</li>
+            <li>Use <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;button&gt;</code>.</li>
+            <li>Make fields required for practice.</li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <!-- Completion & Navigation -->
+  <label class="module-checkbox">
+    <input type="checkbox" id="complete6" class="complete-checkbox">
+    Mark Module 6 as Complete
+  </label>
+  <button class="btn primary-btn prev-btn">Previous: Module 5</button>
+<button class="btn primary-btn next-btn" id="toModule7" disabled>Next: Certificate</button>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="course-module card" id="module7" style="display:none;">
+  <h2 class="module-title">🎓 Get Your Certificate</h2>
+  <p>Please fill out this short form to receive your certificate. It will be delivered within <strong>24 hours</strong> via email.</p>
+
+  <form action="https://formspree.io/f/mkgzvpwy" method="POST" style="margin-top: 24px;">
+    <label for="name">Display Name on Certificate:</label><br>
+    <input type="text" name="name" id="name" required placeholder="e.g., JONNY" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc;"><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" name="email" id="email" required placeholder="you@example.com" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc;"><br>
+
+    <input type="hidden" name="_subject" value="Certificate Request from HTML Course">
+    <input type="hidden" name="message" value="User completed the HTML course and requested a certificate.">
+
+    <button type="submit" class="btn primary-btn">Submit & Get Certificate</button>
+  </form>
+
+  <p style="margin-top: 20px; color: green; font-weight: 500;">📬 Your certificate will be delivered in 24 hours!</p>
+</section>
+
+
+
+
+
+<!-- Accordion JS -->
+
+
+
+    <!-- Module 5 -->
+    <section class="course-module card" id="module5" style="display: none;">
+  <h2 class="module-title">Module 5: Forms & Inputs</h2>
+  <ul class="module-list">
+
+    <!-- form -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;form&gt;</code> → Form container</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>The <code>&lt;form&gt;</code> tag creates an HTML form for user input.</li>
+        <li>Forms can contain input fields, buttons, and other interactive elements.</li>
+        <li>Use the <code>action</code> attribute to specify where to send form data.</li>
+        <li>The <code>method</code> attribute defines how to send data (GET or POST).</li>
+        <li>Forms are block-level elements.</li>
+        <li>Always close the <code>&lt;form&gt;</code> tag.</li>
+      </ul>
+    </li>
+
+    <!-- input -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;input&gt;</code> → Input field</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>The <code>&lt;input&gt;</code> tag creates interactive controls in a form.</li>
+        <li>Use the <code>type</code> attribute (text, password, email, etc.).</li>
+        <li><code>&lt;input&gt;</code> is a self-closing tag.</li>
+        <li>Inputs can have attributes like <code>name</code>, <code>placeholder</code>, and <code>required</code>.</li>
+        <li>Inputs are inline elements by default.</li>
+        <li>Always use a <code>&lt;label&gt;</code> for accessibility.</li>
+      </ul>
+    </li>
+
+    <!-- label -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;label&gt;</code> → Input label</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Defines a label for an <code>&lt;input&gt;</code> element.</li>
+        <li>Use the <code>for</code> attribute to bind with input’s <code>id</code>.</li>
+        <li>Improves accessibility and usability.</li>
+        <li>Clicking the label focuses the input.</li>
+        <li>Labels can wrap the input directly.</li>
+      </ul>
+    </li>
+
+    <!-- textarea -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;textarea&gt;</code> → Multi-line input</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Creates a multi-line text input field.</li>
+        <li>Use <code>rows</code> and <code>cols</code> to set dimensions.</li>
+        <li>Place default text between opening and closing tags.</li>
+        <li>Useful for messages or comments.</li>
+      </ul>
+    </li>
+
+    <!-- button -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;button&gt;</code> → Button</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Creates a clickable button.</li>
+        <li>Use <code>type</code>: submit, reset, or button.</li>
+        <li>Can include text, icons, or HTML content.</li>
+      </ul>
+    </li>
+
+    <!-- select -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;select&gt;</code> → Dropdown</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Creates a dropdown list.</li>
+        <li>Contains <code>&lt;option&gt;</code> elements.</li>
+        <li>Use <code>multiple</code> to allow multiple selections.</li>
+      </ul>
+    </li>
+
+    <!-- option -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;option&gt;</code> → Dropdown option</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Defines an item in a dropdown.</li>
+        <li>Use <code>value</code> to assign a backend value.</li>
+        <li>Use <code>selected</code> to make default selection.</li>
+      </ul>
+    </li>
+
+    <!-- optgroup -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;optgroup&gt;</code> → Grouped options</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Groups related <code>&lt;option&gt;</code> tags inside <code>&lt;select&gt;</code>.</li>
+        <li>Use <code>label</code> attribute to name the group.</li>
+      </ul>
+    </li>
+
+    <!-- fieldset -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;fieldset&gt;</code> → Group fields</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Groups related form fields.</li>
+        <li>Renders with a border around the group.</li>
+        <li>Improves form structure.</li>
+      </ul>
+    </li>
+
+    <!-- legend -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;legend&gt;</code> → Fieldset caption</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Provides a title for a <code>&lt;fieldset&gt;</code>.</li>
+        <li>Appears on the border of the fieldset.</li>
+      </ul>
+    </li>
+
+    <!-- datalist -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;datalist&gt;</code> → Suggested options</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Defines options for <code>&lt;input&gt;</code>.</li>
+        <li>Refer using the <code>list</code> attribute on input.</li>
+        <li>Contains <code>&lt;option&gt;</code> tags inside.</li>
+      </ul>
+    </li>
+
+    <!-- output -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;output&gt;</code> → Display result</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Shows result of calculation or input.</li>
+        <li>Inline element by default.</li>
+      </ul>
+    </li>
+
+    <!-- progress -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;progress&gt;</code> → Progress bar</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Represents progress of a task.</li>
+        <li>Use <code>value</code> and <code>max</code> to define progress.</li>
+      </ul>
+    </li>
+
+    <!-- meter -->
+    <li class="accordion-item">
+      <div class="accordion-header">
+        <span><code>&lt;meter&gt;</code> → Gauge/level meter</span>
+        <button class="accordion-arrow" aria-expanded="false">&#9660;</button>
+      </div>
+      <ul class="info-list" style="display: none;">
+        <li>Displays scalar measurement within a known range.</li>
+        <li>Use for ratings, scores, disk usage, etc.</li>
+      </ul>
+    </li>
+
+  </ul>
+
+  <!-- Completion Checkbox and Navigation -->
+  <label class="module-checkbox">
+    <input type="checkbox" id="complete5" class="complete-checkbox">
+    Mark Module 5 as Complete
+  </label>
+  <button class="btn primary-btn" id="toModule4Prev">Previous: Module 4</button>
+  <button class="btn primary-btn next-btn" id="toModule6" disabled>Next: Module 6</button>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const editor = document.getElementById("live-editor");
+  const preview = document.getElementById("live-preview");
+
+  if (editor && preview) {
+    editor.addEventListener("input", () => {
+      const html = editor.value;
+      preview.srcdoc = html;
+    });
+
+    editor.value = "<h1>Hello HTML Learner!</h1>\n<p>Edit this code to see results below.</p>";
+    preview.srcdoc = editor.value;
+  }
+});
+</script>
